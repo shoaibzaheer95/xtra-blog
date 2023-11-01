@@ -16,6 +16,9 @@ const Main = () => {
                 //console.log(data)
                 setPending(false)
             })
+            .catch(err =>{
+                console.log(err.message);
+            })
             },1000)
             
         },[]);
@@ -25,7 +28,7 @@ const Main = () => {
             <main className="tm-main">
             {isPending && <div className="loader">Loading...</div>}
             {blogs && <Article blogs={blogs} title="All blogs!" />}
-            {blogs && <Article blogs={blogs.filter((blog)=> blog.category === 'Cooking')} title="Teach blogs!" />}
+            {/* {blogs && <Article blogs={blogs.filter((blog)=> blog.category === 'Cooking')} title="Teach blogs!" />} */}
             </main>
         </div>
 

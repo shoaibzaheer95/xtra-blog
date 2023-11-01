@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 const Header = () => {
     return ( 
 
@@ -13,19 +15,16 @@ const Header = () => {
             <nav className="tm-nav" id="tm-nav">            
                 <ul>
                     <li className="tm-nav-item active">
-                    <a href="/blogs/" className="tm-nav-link">
-                        <i className="fas fa-home"></i>
-                        Blog Home
-                    </a></li>
+                    
+                    <Link to="/" className="tm-nav-link">Home <i className="fas fa-home"></i></Link>
+                    </li>
                    
-                    <li className="tm-nav-item"><a href="/about/" className="tm-nav-link">
-                        <i className="fas fa-users"></i>
-                        About Xtra
-                    </a></li>
-                    <li className="tm-nav-item"><a href="/contact/" className="tm-nav-link">
-                        <i className="far fa-comments"></i>
-                        Contact Us
-                    </a></li>
+                    <li className="tm-nav-item">
+                            <Link to="/about"  className="tm-nav-link">About Xtra <i className="fas fa-users"></i></Link>
+                   </li>
+                    <li className="tm-nav-item">
+                        <Link to="/contact" className="tm-nav-link"> Contact Us <i className="far fa-comments"></i></Link>
+                    </li>
                 </ul>
             </nav>
             <div className="tm-mb-65">

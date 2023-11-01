@@ -13,7 +13,7 @@ const Article = ({blogs, title}) => {
                     blogs.map((blog)=>(
                         <article className="col-12 col-md-6 tm-post" key={blog.id}>
                         <hr className="tm-hr-primary"></hr>
-                            <Link to={`/blogs/${blog.id}`}>
+                            <Link to={`/${blog.id}`}>
                                 <div className=" tm-post-link-inner">
                                     <img src={blog.imageSrc} alt="Image" className="img-fluid" />                            
                                 </div>

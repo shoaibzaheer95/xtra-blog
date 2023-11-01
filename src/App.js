@@ -7,24 +7,20 @@ import About from './components/About';
 import Contact from './components/Contact'
 function App() {
   return (
-    <Router>
+    <Router basename="/blogs/">
     <div className="App">
      <Header/>
      <div className="container-fluid">
           <main className="tm-main">
             <Switch>
-              <Route exact path="/blogs/">
-                <Home/>
-              </Route>
-              <Route path="/blogs/:id">
-                <BlogDetails/>
-              </Route>
-              <Route path="/about/">
-               <About/>
-              </Route>
-              <Route path="/contact/">
-                <Contact/>
-               </Route>
+              <Route exact path="/" component={Home} />
+            
+              <Route path="/about" component={About} />
+              
+              <Route path="/contact" component={Contact} />
+              
+              <Route path="/:id" component={BlogDetails} />
+               
             </Switch>
           </main>
           <main className="tm-main">

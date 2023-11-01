@@ -7,7 +7,7 @@
         "category": "Cooking",
         "author": "John Doe",
         "date": "2023-10-31",
-        "imageSrc": "/img/img-05.jpg",
+        "imageSrc": "/blogs/img/img-05.jpg",
         "commentsCount": 2,
         "comments": [
           {
@@ -27,7 +27,7 @@
         "category": "Travel",
         "author": "Jane Smith",
         "date": "2023-10-30",
-        "imageSrc": "/img/img-04.jpg",
+        "imageSrc": "/blogs/img/img-04.jpg",
         "commentsCount": 2,
         "comments": [
           {
@@ -47,7 +47,7 @@
         "category": "Technology",
         "author": "Sarah Brown",
         "date": "2023-10-29",
-        "imageSrc": "/img/img-03.jpg",
+        "imageSrc": "/blogs/img/img-03.jpg",
         "commentsCount": 2,
         "comments": [
           {
@@ -67,7 +67,7 @@
         "category": "Cooking",
         "author": "John Doe",
         "date": "2023-10-31",
-        "imageSrc": "/img/img-01.jpg",
+        "imageSrc": "/blogs/img/img-01.jpg",
         "commentsCount": 2,
         "comments": [
           {

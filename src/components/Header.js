@@ -12,19 +12,17 @@ const Header = () => {
             </div>
             <nav className="tm-nav" id="tm-nav">            
                 <ul>
-                    <li className="tm-nav-item active"><a href="index.html" className="tm-nav-link">
+                    <li className="tm-nav-item active">
+                    <a href="/blogs/" className="tm-nav-link">
                         <i className="fas fa-home"></i>
                         Blog Home
                     </a></li>
-                    <li className="tm-nav-item"><a href="post.html" className="tm-nav-link">
-                        <i className="fas fa-pen"></i>
-                        Single Post
-                    </a></li>
-                    <li className="tm-nav-item"><a href="about.html" className="tm-nav-link">
+                   
+                    <li className="tm-nav-item"><a href="/about/" className="tm-nav-link">
                         <i className="fas fa-users"></i>
                         About Xtra
                     </a></li>
-                    <li className="tm-nav-item"><a href="contact.html" className="tm-nav-link">
+                    <li className="tm-nav-item"><a href="/contact/" className="tm-nav-link">
                         <i className="far fa-comments"></i>
                         Contact Us
                     </a></li>
@@ -44,9 +42,7 @@ const Header = () => {
                     <i className="fab fa-linkedin tm-social-icon"></i>
                 </a>
             </div>
-            <p className="tm-mb-80 pr-5 text-white">
-                Xtra Blog is a multi-purpose HTML template from TemplateMo website. Left side is a sticky menu bar. Right side content will scroll up and down.
-            </p>
+            
         </div>
     </header>
 

@@ -1,6 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 const Header = () => {
+
+const [activeItem, setActiveItem] = useState(0);
+
+  // Handle click to toggle active state
+  const handleClickActive = (index) => {
+    if (index === activeItem) {
+      setActiveItem(0); // If the same item is clicked again, remove active state
+    } else {
+      setActiveItem(index); // Otherwise, set the clicked item as active
+    }
+    const prevActiveItem = activeItem;
+    setActiveItem(index);
+
+    // Remove the class from the previously active item
+    if (prevActiveItem !== null) {
+      const prevActiveClassName = `navActive${prevActiveItem + 1}`;
+      document.body.classList.remove(prevActiveClassName);
+    }
+
+    // Add the class to the currently active item
+    const newActiveClassName = `navActive${index + 1}`;
+    document.body.classList.add(newActiveClassName);
+
+  }
     return ( 
 
         <header className="tm-header" id="tm-header">
@@ -14,16 +39,16 @@ const Header = () => {
             </div>
             <nav className="tm-nav" id="tm-nav">            
                 <ul>
-                    <li className="tm-nav-item active">
+                    <li className={activeItem === 0 ? 'tm-nav-item active' : 'tm-nav-item'}>
                     
-                    <Link to="/" className="tm-nav-link">Home <i className="fas fa-home"></i></Link>
+                    <Link to="/" className="tm-nav-link"  onClick={() => handleClickActive(0)}>Home <i className="fas fa-home"></i></Link>
                     </li>
                    
-                    <li className="tm-nav-item">
-                            <Link to="/about"  className="tm-nav-link">About Xtra <i className="fas fa-users"></i></Link>
+                    <li className={activeItem === 1 ? 'tm-nav-item active' : 'tm-nav-item'}>
+                            <Link to="/about"  className="tm-nav-link"  onClick={() => handleClickActive(1)}>About Xtra <i className="fas fa-users"></i></Link>
                    </li>
-                    <li className="tm-nav-item">
-                        <Link to="/contact" className="tm-nav-link"> Contact Us <i className="far fa-comments"></i></Link>
+                    <li className={activeItem === 2 ? 'tm-nav-item active' : 'tm-nav-item'}>
+                        <Link to="/contact" className="tm-nav-link"  onClick={() => handleClickActive(2)}> Contact Us <i className="far fa-comments"></i></Link>
                     </li>
                 </ul>
             </nav>

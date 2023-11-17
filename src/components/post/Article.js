@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import blogsData from "../../blogsData";
 
-const Article = ({blogs, title}) => {
+
+const Article = ({blogsData, title}) => {
 
     return ( 
         <div>
@@ -10,7 +12,7 @@ const Article = ({blogs, title}) => {
             <div className="row tm-row">
            
                     {
-                    blogs.map((blog)=>(
+                        blogsData.blogs.map((blog)=>(
                         <article className="col-12 col-md-6 tm-post" key={blog.id}>
                         <hr className="tm-hr-primary"></hr>
                             <Link to={`${blog.id}`}>
